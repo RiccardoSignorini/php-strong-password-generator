@@ -13,8 +13,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-center">Password sicurissima</h1>
+    <div class="container text-center">
+        <h1 class="my-4">Password sicurissima</h1>
+        <form method="GET"> 
+            <div class="my-4">
+                <label>Lunghezza password:</label> 
+                <input type="number" id="lunghezza_password" required min="6" max="30"> 
+                <button type="submit" class="btn btn-primary mx-4">Genera password</button>    
+            </div>
+        </form>
     </div>
 
     <!-- BOOTSTRAP JS -->

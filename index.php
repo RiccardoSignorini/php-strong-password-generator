@@ -16,24 +16,24 @@
         <form method="GET"> 
             <!-- INPUT PER LA LUNGHEZZA + BUTTON PER FAR PARTIRE LA FUNZIONE -->
             <div class="my-4">
-                <label>Lunghezza password:</label> 
-                <input type="number" id="lunghezza_password" required min="6" max="30"> 
+                <label for="lunghezza-password">Lunghezza password:</label> 
+                <input type="number" id="lunghezza-password" name="lunghezza-password" required min="6" max="30"> 
                 <button type="submit" class="btn btn-primary mx-4">Genera password</button>    
             </div>
-            <?php 
-                if(isset($_GET['lunghezza_password'])){
-                    $lunghezza = $_GET['lunghezza_password'];
+        </form>   
+        <?php 
+            if(isset($_GET['lunghezza-password'])){
+                $lunghezza = $_GET['lunghezza-password'];
 
-                    function generaPassword($lunghezza) {
-                        $caratteri = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+;:,.?";
-                        $password = substr( str_shuffle( $caratteri ), 0, $lunghezza );
-                        return $password;
-                    }
-
-                    echo "<p>La password generata è: " . generaPassword($lunghezza) . "</p>";
+                function generaPassword($lunghezza) {
+                    $caratteri = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+;:,.?";
+                    $password = substr( str_shuffle( $caratteri ), 0, $lunghezza );
+                    return $password;
                 }
-            ?>
-        </form>              
+
+                echo "<p>La password generata è: " . generaPassword($lunghezza) . "</p>";
+            }
+        ?>         
     </div>
 
     <!-- BOOTSTRAP JS -->

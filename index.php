@@ -30,10 +30,10 @@
                     $password = substr( str_shuffle( $caratteri ), 0, $lunghezza );
                     return $password;
                 }
-
-                echo "<p>La password generata è: " . generaPassword($lunghezza) . "</p>";
-            }
-        ?>         
+        ?>
+                <p>La password generata è: <?php echo generaPassword($lunghezza); ?> </p>
+        <?php } ?>
+                 
     </div>
 
     <!-- BOOTSTRAP JS -->

@@ -21,18 +21,8 @@
                 <button type="submit" class="btn btn-primary mx-4">Genera password</button>    
             </div>
         </form>   
-        <?php 
-            if(isset($_GET['lunghezza-password'])){
-                $lunghezza = $_GET['lunghezza-password'];
-
-                function generaPassword($lunghezza) {
-                    $caratteri = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+;:,.?";
-                    $password = substr( str_shuffle( $caratteri ), 0, $lunghezza );
-                    return $password;
-                }
-        ?>
-                <p>La password generata è: <?php echo generaPassword($lunghezza); ?> </p>
-        <?php } ?>
+        <!-- FUNZIONE SU COMPONENTE -->
+        <?php include_once __DIR__ . '/include/partials/function.php' ?>
                  
     </div>
 
